@@ -14,10 +14,9 @@ import {
 } from '@angular/common/http';
 import { NgxSpinnerModule } from 'ngx-spinner';
 import { errorHandlerInterceptor } from './interceptors/error-handler.interceptor';
-import { LandingComponent } from './core/landing/landing.component';
 
 @NgModule({
-  declarations: [AppComponent, HeaderComponent, LandingComponent],
+  declarations: [AppComponent, HeaderComponent],
   imports: [
     BrowserModule,
     AppRoutingModule,

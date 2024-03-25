@@ -1,17 +1,17 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
-import { LandingComponent } from './core/landing/landing.component';
 
 const routes: Routes = [
   {
     path: '',
-    component: LandingComponent,
+    pathMatch: 'full',
+    redirectTo: 'cities',
   },
   {
-    path: 'cities',
+    path: '',
     children: [
       {
-        path: '',
+        path: 'cities',
         loadChildren: () =>
           import('./core/city/city.module').then((m) => m.CityModule),
       },
