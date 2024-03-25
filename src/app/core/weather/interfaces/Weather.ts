@@ -1,4 +1,4 @@
-export interface WeatherForecast {
+export interface Weather {
   date: Date;
   min: number;
   max: number;

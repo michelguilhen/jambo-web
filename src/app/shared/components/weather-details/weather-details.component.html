@@ -1,0 +1,44 @@
+<div class="mt-6">
+  <div class="text-center">
+    <span class="text-lg color-primary font-bold">Weather Details</span>
+  </div>
+  <div class="justify-center flex text-center">
+    <mat-card class="p-6 min-w-36">
+      <div class="font-bold">
+        {{ forecast.date | date : "fullDate" }}
+      </div>
+      <div class="flex justify-center">
+        <img
+          src="https://openweathermap.org/img/wn/{{ forecast.icon }}@2x.png"
+          class="w-20"
+        />
+      </div>
+      <div class="flex gap-5">
+        <div>
+          <div class="color-primary font-bold">Avg.</div>
+          <div class="font-bold">
+            {{ forecast.temp | displayTemperature }}
+          </div>
+        </div>
+        <div>
+          <div class="color-primary font-bold">Min.</div>
+          <div class="font-bold">
+            {{ forecast.min | displayTemperature }}
+          </div>
+        </div>
+        <div>
+          <div class="color-primary font-bold">Max.</div>
+          <div class="font-bold">
+            {{ forecast.max | displayTemperature }}
+          </div>
+        </div>
+        <div>
+          <div class="color-primary font-bold">Feel</div>
+          <div class="font-bold">
+            {{ forecast.feelsLike | displayTemperature }}
+          </div>
+        </div>
+      </div>
+    </mat-card>
+  </div>
+</div>

@@ -1,0 +1,23 @@
+<mat-card
+  *ngIf="forecast"
+  class="flex justify-center items-center md:min-w-24 min-h-32 cursor-pointer transition ease-in-out delay-100 hover:-translate-y-1 hover:scale-105 hover:bg-cyan-500 duration-200 hover:text-white"
+>
+  <mat-card-header>
+    <mat-card-title-group>
+      <mat-card-title>
+        <div class="text-center">{{ forecast.date | date : "E" }}</div>
+        <img
+          class="w-10"
+          src="https://openweathermap.org/img/wn/{{ forecast.icon }}@2x.png"
+          alt=""
+        />
+        <span class="text-xl font-semibold">
+          {{ forecast.temp | displayTemperature }}
+        </span>
+      </mat-card-title>
+    </mat-card-title-group>
+  </mat-card-header>
+  <mat-card-content>
+    <span class="text">{{ forecast.condition }}</span>
+  </mat-card-content>
+</mat-card>
