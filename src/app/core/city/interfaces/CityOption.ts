@@ -1,4 +1,4 @@
 export interface CityOption {
   name: string;
-  displayText: string;
+  details: string;
 }
